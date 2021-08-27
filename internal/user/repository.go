@@ -20,7 +20,7 @@ func (repo Repository) GetAllUsers(ctx context.Context) ([]User, error) {
 	rows, err := repo.Finder.Query(ctx, `
 		select "user".id,
 			   "user".name,
-               
+                           "user".last_name
 			   "user".year,
 			   "user".gender,
 			   city.id,
