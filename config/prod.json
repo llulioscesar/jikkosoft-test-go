@@ -1,0 +1,13 @@
+{
+  "postgres": {
+    "databases": {
+      "jikkosoft": {
+        "host": "localhost",
+        "port": 6543,
+        "user": "root",
+        "password": "1234",
+        "db": "test"
+      }
+    }
+  }
+}

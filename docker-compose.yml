@@ -1,0 +1,19 @@
+version: '3.9'
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:alpine
+    restart: always
+    ports:
+      - "6543:5432"
+    environment:
+      POSTGRES_PASSWORD: "1234"
+      POSTGRES_USER: "root"
+      POSTGRES_DB: "test"
+    volumes:
+      - ./docker/postgres:/var/lib/postgresql/data
+    networks:
+      - postgres-name
+networks:
+  postgres-name:
+    name: postgres_default
